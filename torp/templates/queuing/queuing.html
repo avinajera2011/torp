@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Andrey Vinajera-Zamora">
+    <meta name="keywords" content="operation research, queuing, waiting">
+    <title>Queuing theory</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" />
+    {% load static %}
+    <script type="text/javascript" src="{% static 'js_script.js' %}"></script>
+</head>
+<body>
+    <article>
+        <header>
+                <div>
+                    <div id="logo">
+                        TORP
+                    </div>
+                    <div style="text-align:center;">
+                        <h1> Tools for Operation Research's Problems. </h1>
+                        <h3><i>Support for teachers and students</i></h3>
+                    </div>
+                </div>
+        </header>
+        <br>
+        <hr>
+
+        <form action="results/" method="post"> {% csrf_token %}
+            <section>
+            <h1 style='text-align: center; margin-bottom:5px'>Data description (M/M system)</h1>
+            <table class="data">
+                <tr class="fieldWrapper">
+                    {{ form.servers.errors }}
+                    <td class="firstcolumn"><label>Number of servers (S):</label></td>
+                    <td>{{ form.servers }}</td>
+                    <td>eg: 1,2,3...</td>
+                </tr>
+                <tr class="fieldWrapper">
+                    {{ form.pop_queue.errors }}
+                    <td class="firstcolumn"><label >Size of population/queue:</label></td>
+                    <td>{{ form.pop_queue }}</td>
+                    <td>eg: M, LQ=#, LS=#</td>
+                </tr>
+                <tr><td colspan="3" style="text-align:center">LQ: limited queue, LS: limited source, M or any other value: infinite, </td></tr>
+                <tr class="fieldWrapper">
+                    {{ form.arrival.errors }}
+                    <td class="firstcolumn"><label>Arrival rate (lambda):</label></td>
+                    <td>{{ form.arrival }}</td>
+                    <td></td>
+                </tr>
+                <tr class="fieldWrapper">
+                    {{ form.service.errors }}
+                    <td class="firstcolumn"><label>Service rate (mu):</label></td>
+                    <td>{{ form.service }}</td>
+                    <td></td>
+                </tr>
+                <tr class="fieldWrapper">
+                    {{ form.n_clients.errors }}
+                    <td class="firstcolumn"><label>Number of clients in the system (n):</label></td>
+                    <td>{{ form.n_clients }}</td>
+                    <td></td>
+                </tr>
+                <tr class="fieldWrapper">
+                    {{ form.waiting_cost.errors }}
+                    <td class="firstcolumn"><label>Waiting costs:</label></td>
+                    <td>{{ form.waiting_cost }}</td>
+                    <td></td>
+                </tr>
+                <tr class="fieldWrapper">
+                    {{ form.service_cost.errors }}
+                    <td class="firstcolumn"><label>Service cost:</label></td>
+                    <td>{{ form.service_cost }}</td>
+                    <td></td>
+                </tr>
+                <tr class="fieldWrapper">
+                    {{ form.clients_lost_cost.errors }}
+                    <td class="firstcolumn"><label>Cost per lost clients:</label></td>
+                    <td>{{ form.clients_lost_cost }}</td>
+                    <td></td>
+                </tr>
+                <tr>
+                        <td colspan="3" style="text-align: center;"><input style="border: dashed black; border-width: 1px" type="submit" value="SOLVE"></td>
+                </tr>
+            </table>
+        </section>
+        </form>
+    </article>  
+<!--    <p class="center" style="color: red; text-indent: 0px; border-style: none;"><b>NOTE</b>: Just the models M/M/1:&infin;,FIFO and M/M/1:LQ,FIFO are available. The rest of models will be added soon. </p>-->
+    <hr style="clear: both; border-width: 1px">
+        <footer>
+            <div>
+                <div>
+                    {% load static %} <img style="border-radius: 40px;width: 80px; margin-left: 35px" id="img_mine" src="{% static 'me2.png' %}" >
+                </div>
+                <div>
+                    <p>Copyright &copy; 2021 <br>  Central University "Marta Abreu" of Las Villas <br>
+                    Faculty of Mechanics and Industrial Engineering <br>
+                    Department of Industrial Engineering</p>
+                </div>
+            </div>
+        </footer>
+        <script>
+            update_description("queuing");
+        </script>
+</body>
+</html>

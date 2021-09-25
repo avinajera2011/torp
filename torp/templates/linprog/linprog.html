@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Andrey Vinajera-Zamora">
+    <meta name="keywords" content="operation research, linear programming, optimization">
+    <title>Linear programming</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" />
+    {% load static %}
+    <script type="text/javascript" src="{% static 'js_script.js' %}"></script>
+</head>
+<body>
+    <article>
+        <header>
+                <div>
+                    <div id="logo">
+                        TORP
+                    </div>
+                    <div style="text-align:center;">
+                        <h1> Tools for Operation Research's Problems. </h1>
+                        <h3><i>Support for teachers and students</i></h3>
+                    </div>
+                </div>
+        </header>
+        <br>
+        <hr style="clear: both; border-width: 1px">
+            <form action="results/" method="post">
+                <section>
+                <h1 style='text-align: center; margin-bottom:5px'>LINPROG</h1>
+                    <script>
+                        xxx();
+                    </script>
+                    <table class="data">
+<!--                        {% for form in formset  %}-->
+<!--                            <tr > {{ form.label }}-->
+<!--                                {% for item in form %}-->
+<!--&lt;!&ndash;                                    <tr>&ndash;&gt;-->
+<!--                                        <td style="width:10px; text-align: center">{{ item }}</td>-->
+<!--                                        {% if not item.label_suffix_tag == 'direction' %}-->
+<!--                                        <td id="id_xvar">{{ item.label_tag }}</td>-->
+<!--                                        {% endif %}-->
+<!--&lt;!&ndash;                                    </tr>&ndash;&gt;-->
+<!--                                {% endfor %}-->
+<!--                            </tr>-->
+<!--                        {%  endfor %}-->
+                            {% csrf_token %}
+                            {% for field in formset %}
+                                <tr>
+                                    <td> {{ field }}</td>
+                                </tr>
+                            {% endfor %}
+                            <tr>
+                                <td>
+                                    Variables (vars) can be:<br>
+                                    vars are not specified (in blank) are >= 0 <br>
+                                    binary (eg: x1 bin) <br>
+                                    no restricted by signus (eg: x2 NRS)<br>
+                                    in the range of 3 to 10 (eg: x2 (3,10)<br>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td colspan="3" style="text-align: center;"><input type="submit" value="SOLVE"></td>
+                            </tr>
+                    </table>
+            </section>
+            </form>
+    </article>
+    <hr style="clear: both; border-width: 1px">
+        <footer>
+            <div>
+                <div>
+                    {% load static %} <img style="border-radius: 40px;width: 80px; margin-left: 35px" id="img_mine" src="{% static 'me2.png' %}" >
+                </div>
+                <div>
+                    <p>Copyright &copy; 2021 <br>  Central University "Marta Abreu" of Las Villas <br>
+                    Faculty of Mechanics and Industrial Engineering <br>
+                    Department of Industrial Engineering</p>
+                </div>
+            </div>
+        </footer>
+        <script>
+            update_description("queuing");
+        </script>
+</body>
+</html>

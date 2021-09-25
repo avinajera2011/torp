@@ -1,0 +1,91 @@
+#logo {
+    font-size: 60px;
+    float: left;
+    text-align: center;
+    margin: 0x;
+    border: dashed green;
+    padding: 5px;
+    /*border-radius: 5px;*/
+}
+a.btn-ok {
+    border-radius: 15px;
+    /*border: 3px outset #888;*/
+    position: relative;
+    display: inline-block;
+    padding: 5px 5px;
+    color: #eee;
+    text-transform: uppercase;
+    /*letter-spacing: 4px;*/
+    overflow: hidden;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+    /*font-family: verdana;*/
+    font-size: 12px;
+    font-weight: bolder;
+    text-decoration: none;
+    background:linear-gradient(160deg, #666, #444);
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+    /*transition: 0.2s;*/
+    /*box-shadow: inset 1 1 20px rgba(255, 255, 255, 0);
+    /*outline: 1px solid;*/
+    outline-color: rgba(255, 255, 255, .5);
+    outline-offset: 0px;
+    text-shadow: none;
+    /*transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);*/
+    clear: both;
+    width: 100px;
+}
+footer {
+    text-align: center;
+}
+header {
+    text-align: center;
+    padding: 5px;
+    height: 14vh;
+}
+input {
+    border-radius: 5px;
+    border-width: 1px;
+    width: 80px;
+}
+#img_mine {
+    border-radius: 150px;
+    float: left;
+    margin-right:20px;
+    width: 40px;
+    /*height: 40px;*/
+}
+
+#page_title {
+    /*float: left;*/
+    text-align: center;
+    /*width: 40%px;*/
+}
+nav {
+    font-weight: bold;
+}
+.vnavbar {
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 5px;
+    /*margin-top: -5x;*/
+    width: 10%;
+    float: left;
+    /*background-color: beige;*/
+}
+#main_content {
+    /*position: relative;*/
+    /*margin: 20px;*/
+    text-align: justify;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 85%;
+    float: left;
+}
+#solvertool {
+      border-radius: 5px;
+    background-color: white;
+    /*color: black;*/
+    border: 2px solid #4CAF50;
+    clear: both;
+  }

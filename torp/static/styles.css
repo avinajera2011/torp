@@ -1,0 +1,173 @@
+#logo {
+    font-size: 60px;
+    float: left;
+    text-align: center;
+    margin: 0x;
+    border: dashed green;
+    padding: 5px;
+    /*border-radius: 5px;*/
+}
+a.btn-ok {
+    border-radius: 15px;
+    /*border: 3px outset #888;*/
+    position: relative;
+    display: inline-block;
+    padding: 5px 5px;
+    color: #eee;
+    text-transform: uppercase;
+    /*letter-spacing: 4px;*/
+    overflow: hidden;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+    /*font-family: verdana;*/
+    font-size: 12px;
+    font-weight: bolder;
+    text-decoration: none;
+    background:linear-gradient(160deg, #666, #444);
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+    /*transition: 0.2s;*/
+    /*box-shadow: inset 1 1 20px rgba(255, 255, 255, 0);
+    /*outline: 1px solid;*/
+    outline-color: rgba(255, 255, 255, .5);
+    outline-offset: 0px;
+    text-shadow: none;
+    /*transition: all 1250ms cubic-bezier(0.19, 1, 0.22, 1);*/
+    clear: both;
+    width: 100px;
+  } 
+  a.btn-ok2{
+    border-radius: 10px;
+    display: inline-block;
+    padding: 5px;
+    color: rgb(0, 0, 0);
+    text-transform: uppercase;
+    overflow: hidden;
+    box-shadow: 0 0 10px rgb(0, 0, 0, 1);
+    font-size: 12px;
+    font-weight: bolder;
+    text-decoration: none;
+    background:none;
+    text-shadow: 0px 0px 2px rgba(0, 0, 0, .5);
+    outline-color: rgba(255, 255, 255, .5);
+    outline-offset: 0px;
+    text-shadow: none;
+    clear: both;
+    width: 100px;
+  } 
+ /*.btn-ok:hover {
+    border: 1px solid;
+    box-shadow: inset 0 0 20px rgba(255, 255, 255, .5), 0 0 20px rgba(255, 255, 255, .2);
+    outline-color: rgba(255, 255, 255, 0);
+    outline-offset: 5px;
+    text-shadow: 1px 1px 2px #427388; 
+  }*/
+
+.data {
+    margin-left: auto;
+    margin-right: auto;
+    outline-style: auto; 
+    background-color: darkkhaki;
+}
+.data_zone {
+    /*width: 40%;*/
+    margin-left: 35px;
+    margin-bottom: 20px;
+    float: left;
+}
+.description_zone {
+    margin-left: 20px;
+    width: 450px;
+    float: left;
+}
+.equations-sect {
+    width: 30%;
+}
+footer {
+    text-align: center;
+}
+.firstcolumn {
+    text-align: right;
+}
+header {
+    text-align: center;
+    padding: 5px;
+    height: 14vh;
+}
+.column_width {
+    width: 10px;
+}
+hr {
+    border-width: 1px;
+    clear: both;
+}
+input {
+    border-radius: 5px;
+    border-width: 1px;
+    width: 80px;
+}
+#img_mine {
+    border-radius: 75px;
+    float: left;
+}
+nav {
+    font-weight: bold;
+}
+.vnavbar {
+    text-align: center;
+    margin-right: 5px;
+    margin-left: 5px;
+    /*margin-top: 25px;*/
+    width: 10%;
+    float: left;
+    background-color: beige;
+}
+#main_content {
+    /*position: relative;*/
+    /*margin: 20px;*/
+    text-align: justify;
+    padding: 10px;
+    font-size: 18px;
+    border-radius: 5px;
+    width: 85%;
+    float: left;
+}
+/* To align equations*/
+.MathJax_Display { 
+    text-align: left !important;
+    display: inline !important;
+}
+.model_measures {
+    text-align: center;
+    font-weight: bold;
+}
+#page_title {
+    float: left;
+}
+select {
+    border-radius: 5px;
+    border-width: 1px;
+
+}
+#solvertool {
+      border-radius: 5px;
+    background-color: white;
+    /*color: black;*/
+    border: 2px solid #4CAF50;
+    clear: both;
+  }
+  
+  #solvertool:hover {
+    background-color: #4CAF50;
+    color: white;
+  }
+  .topics {
+    width: 10%;
+    border-radius: 5px;
+    border: solid;
+    border-width: 1px;
+    border-color: burlywood;
+    margin-bottom: 20px;
+    padding: 5px 5px;
+    position: relative;
+    color: rgb(4, 22, 12);
+    background-color: #888;
+}

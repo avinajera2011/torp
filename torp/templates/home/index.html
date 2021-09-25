@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Andrey Vinajera-Zamora">
+    <meta name="keywords" content="operation research, optimization, model">
+    <title>Tools for Operation Research</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'home/styles_index.css' %}">
+    {% load static %}
+    <script type="text/javascript" src="{% static 'home/js_script.js' %}"></script>
+    <!--<script type="text/javascript" src="D:/_Installers/MathJax-2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+<!--    <script type="text/javascript" src="js_script.js"></script>-->
+</head>
+<body class="bg">
+        <article>
+            <header>
+                <div>
+                    <div id="logo">
+                        TORP
+                    </div>
+                    <div id='page_title'>
+                        <h1> Tools for Operation Research's Problems. </h1>
+                        <h3><i>Support for teachers and students</i></h3>
+                    </div>
+                </div>
+            </header>
+            <br><hr style="clear: both; border-width: 1px">
+            <section class="vnavbar">
+                <p>
+                        <a href="javascript:home();" class="btn-ok">Home</a> <br><br>
+                        <a href="javascript:queuing();" class="btn-ok">Queuing</a><br><br>
+                        <a href="javascript:inventory();" class="btn-ok">Inventory</a><br><br>
+                        <a href="javascript:linprog();" class="btn-ok">LinProg</a><br><br>
+                        <a href="javascript:about();" class="btn-ok">About us</a><br><br>
+                        <a href="javascript:contact();" class="btn-ok">Contact us</a><br>
+                </p>
+            </section>
+            <section id="main_content">
+                <h1 style="text-align: left;">Operations research</h1>
+                <p>
+                    Operations research (British English: operational research), often shortened to the initialism OR, is a discipline that deals with the development and application of advanced analytical methods to improve decision-making. It is sometimes considered to be a subfield of mathematical sciences. The term management science is sometimes used as a synonym. Employing techniques from other mathematical sciences, such as modeling, statistics, and optimization, operations research arrives at optimal or near-optimal solutions to complex decision-making problems. Because of its emphasis on practical applications, operations research has overlap with many other disciplines, notably industrial engineering. Operations research is often concerned with determining the extreme values of some real-world objective: the maximum (of profit, performance, or yield) or minimum (of loss, risk, or cost). Originating in military efforts before World War II, its techniques have grown to concern problems in a variety of industries.
+                </p>
+            </section>
+            <br><hr style="clear: both; border-width: 1px">
+        </article>
+        <footer>
+            <div>
+                <div>
+                    {% load static %} <img style="border-radius: 40px;width: 80px; margin-left: 35px" id="img_mine" src="{% static 'me2.png' %}" >
+                </div>
+                <div>
+                    <p>Copyright &copy; 2021 <br>  Central University "Marta Abreu" of Las Villas <br>
+                    Faculty of Mechanics and Industrial Engineering <br>
+                    Department of Industrial Engineering</p>
+                </div>
+            </div>
+        </footer>
+        <script>
+            update_description("home");
+        </script>
+</body>
+</html>

@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="author" content="Andrey Vinajera-Zamora">
+        <meta name="keywords" content="operation research, queuing, waiting">
+        <title>Queuing theory</title>
+        {% load static %}
+        <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" />
+        {% load static %}
+        <script type="text/javascript" src="{% static 'js_script.js' %}"></script>
+    </head>
+<body>
+    <article>
+        <header>
+                <div>
+                    <div id="logo">
+                        TORP
+                    </div>
+                    <div style="text-align:center;">
+                        <h1> Tools for Operation Research's Problems. </h1>
+                        <h3><i>Support for teachers and students</i></h3>
+                    </div>
+                </div>
+        </header>
+        <br>
+        <hr>
+        <form action="torp/queuing/results/" method="POST">
+            <section>
+            <h1 style="text-align:center"> Performance measures</h1>
+            <table class="data">
+                <tr >
+                    <td class="firstcolumn" >Model:</td>
+                    <td class="'unit2">{{ model }}</td> <td></td>
+                </tr>
+                <tr >
+                    <td class="firstcolumn" >Customer arrival rate (lambda):</td>
+                    <td class="'unit2">{{ lambda }}</td> <td></td>
+                </tr>
+                <tr >
+                    <td class="firstcolumn" >Customer service rate (mu):</td>
+                    <td class="'unit2">{{ mu }}</td> <td></td>
+                </tr>
+                <tr >
+                    <td class="firstcolumn" >Overall system's utilization (rho):
+                    <td>{{ rho }}</td>
+                    <td></td>
+                </tr>
+                <tr >
+                    <td class="firstcolumn" >Average number of customer in the system (L):</td>
+                    <td class="'unit2">{{ L }}</td> <td></td>
+                </tr>
+                <tr >
+                    <td class="firstcolumn" >Average number of customer in the queue (L<sub>q</sub>):</td>
+                    <td class="'unit2">{{ Lq }}</td> <td></td>
+                </tr>
+                <tr >
+                    <td class="firstcolumn" >Average time customers spend in the system (W):</td>
+                    <td class="'unit2">{{ W }}</td> <td></td>
+                </tr>
+                <tr >
+                    <td class="firstcolumn" >Average time customers spend in the queue (W<sub>q</sub>):</td>
+                    <td class="'unit2">{{ Wq }}</td> <td></td>
+                </tr>
+                <tr >
+                    <td class="firstcolumn" >The probability that the system is idle (P<sub>o</sub>):</td>
+                    <td class="'unit2">{{ Po }}</td> <td></td>
+                </tr>
+                <tr >
+                    <td class="firstcolumn" >Probability of n unit(s) in the system (P<sub>n</sub>):</td>
+                    <td class="'unit2">{{ Pn }}</td> <td></td>
+                </tr>
+                <tr >
+                    <td class="firstcolumn" >Probability of customer arrives and have to wait (P(T>0)):</td>
+                    <td class="'unit2">{{ P1 }}</td> <td></td>
+                </tr>
+                <tr >
+                    <td class="firstcolumn" >Probability of customer arrives and leave the system:</td>
+                    <td class="'unit2">{{ Pmclient }}</td> <td></td>
+                </tr>
+                <tr >
+                    <td class="firstcolumn" >Total cost:</td>
+                    <td class="'unit2">{{ Ct }}</td> <td></td>
+                </tr>
+            </table>
+
+
+            <hr>
+            <footer>
+            <div>
+                <div>
+                    {% load static %} <img style="border-radius: 40px;width: 80px; margin-left: 35px" id="img_mine" src="{% static 'me2.png' %}" >
+                </div>
+                <div>
+                    <p>Copyright &copy; 2021 <br>  Central University "Marta Abreu" of Las Villas <br>
+                    Faculty of Mechanics and Industrial Engineering <br>
+                    Department of Industrial Engineering</p>
+                </div>
+            </div>
+        </footer>
+        <script>
+            update_description("queuing");
+        </script>
+        </section>
+        </form>
+    </article>
+</body>
+</html>

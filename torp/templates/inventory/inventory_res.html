@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="author" content="Andrey Vinajera-Zamora">
+    <meta name="keywords" content="inventory's system, models">
+    <title>Results of the inventory's problem</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'styles.css' %}" />
+    {% load static %}
+    <script type="text/javascript" src="{% static 'js_script.js' %}"></script>
+<!--    <script type="text/javascript" src="D:/_Installers/MathJax-2.7.7/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>-->
+</head>
+<body>
+    <article>
+        <header>
+                <div>
+                    <div id="logo">
+                        TORP
+                    </div>
+                    <div style="text-align:center;">
+                        <h1> Tools for Operation Research's Problems. </h1>
+                        <h3><i>Support for teachers and students</i></h3>
+                    </div>
+                </div>
+        </header>
+        <br>
+        <hr style="clear: both; border-width: 1px">
+<!--        <section class="vnavbar">-->
+<!--            <p>-->
+<!--                <a id="model1" class="btn-ok" href="javascript:inventory_home();">Models</a> <br><br>-->
+<!--                <a id="model2" class="btn-ok" href="javascript:inventory_legend();">Legend</a>  <br><br>-->
+<!--                <a id="model3" class="btn-ok" href="javascript:inventory_measures();">Measures</a>  <br><br>-->
+<!--            </p>-->
+<!--        </section>-->
+<!--        <form action="/torp/inventory/results/" method="post">-->
+            <section class="data_zone">
+            <h1 style="text-align: center;"> Performance measures</h1>
+                <table class="data" >
+                    <tr class="firstcolumn"><td>Model=</td><td id="system" colspan="2"><b>{{ model }}</b></td></tr>
+                    <tr class="firstcolumn"><td>Order quantity(Q)=</td><td id="Q">{{ Q }}</td><td id="q_lbl">{{ unit }}</td></tr>
+                    <tr class="firstcolumn"><td>Maximum inventory(I<sub>max</sub>)=</td><td id="S">{{ I }}</td><td id="s_lbl">{{ unit }}</td></tr>
+                    <tr class="firstcolumn"><td>Split time(t<sub>1</sub>)=</td><td id="t1">{{ t1 }}</td><td id="t1_lbl">{{ time_unit }}</td></tr>
+                    <tr class="firstcolumn"><td>Split time(t<sub>2</sub>)=</td><td id="t2">{{ t2 }}</td><td id="t2_lbl">{{ time_unit }}</td></tr>
+                    <tr class="firstcolumn"><td>Split time(t<sub>3</sub>)=</td><td id="t3">{{ t3 }}</td><td id="t3_lbl">{{ time_unit }}</td></tr>
+                    <tr class="firstcolumn"><td>Split time(t<sub>4</sub>)=</td><td id="t4">{{ t4 }}</td><td id="t4_lbl">{{ time_unit }}</td></tr>
+                    <tr class="firstcolumn"><td>Deficit (B)=</td><td id="B">{{ B }}</td><td id="B_lbl">{{ unit }}</td></tr>
+                    <tr class="firstcolumn"><td>Period(T)=</td><td id="T">{{ T }}</td><td id="T_lbl">{{ time_unit }}</td></tr>
+                    <tr class="firstcolumn"><td>Frequency(f)=</td><td id="f">{{ f }}</td><td id="f_lbl">t/{{ unit }}</td></tr>
+                    <tr class="firstcolumn"><td>Production cost=</td><td id="PC">{{ PC }}</td><td id="pc_lbl">$</td></tr>
+                    <tr class="firstcolumn"><td>Inventory cost=</td><td id="IC">{{ IC }}</td><td id="ic_lbl">$</td></tr>
+                    <tr class="firstcolumn"><td>Deficit cost=</td><td id="DC">{{ DC }}</td><td id="dc_lbl">$</td></tr>
+                    <tr class="firstcolumn"><td>Total costs=</td><td id="TC">{{ TC }}</td><td id="tc_lbl">$</td></tr>
+                    <tr style="text-align: center;"><td colspan="3">t: times</td></tr>
+                </table>
+        </section>
+<!--        </form>-->
+          <hr style="clear: both; border-width: 1px">
+    </article>
+    <footer>
+            <div>
+                <div>
+                    {% load static %} <img style="border-radius: 40px;width: 80px; margin-left: 35px" id="img_mine" src="{% static 'me2.png' %}" >
+                </div>
+                <div>
+                    <p>Copyright &copy; 2021 <br>  Central University "Marta Abreu" of Las Villas <br>
+                    Faculty of Mechanics and Industrial Engineering <br>
+                    Department of Industrial Engineering</p>
+                </div>
+            </div>
+        </footer>
+        <script>
+            update_description("inventory");
+        </script>
+    
+</body>
+</html>
