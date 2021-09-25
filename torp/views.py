@@ -1,16 +1,9 @@
 # Create your views here.
 import numpy as np
 from django.shortcuts import render
-# import django_tables2 as table
-# from django.template.context_processors import request
-# from django.forms import formset_factory
-# from .tables import linprog_table
 from .forms import InventoryForm, QueuingForm, linprogForm
-# sys.path.append('..')
 from .coding.inventory_models import solving_model
 from .coding.queuing_models import Models
-# from django.views.generic import ListView
-# from .models import linprog_vars
 
 
 def linprog(browser):
@@ -98,16 +91,6 @@ def extract_cj(item):
             else:
                 cj['error'] = var['error']
                 break
-
-            # cj[item.split('x')[1]] = 1
-            # try:
-            #     if item.split('x')[0] == '':
-            #         cj[item.split('x')[1]] = 1
-            #     else:
-            #         cj[item.split('x')[1]] = float(item.split('x')[0])
-            # except ValueError:
-            #     cj['error'] = 'Please check Cj of X{}'.format(item.split('x')[1])
-            #     break
     return cj
 
 
@@ -121,11 +104,9 @@ def separate_var_coef(item):
     print('split:', split_var)
     try:
         if split_var[0] == '':
-            # var_ready[item.split('x')[1]] = 1
             var_ready['coefficient'] = 1
             var_ready['subindex'] = split_var[1]
         else:
-            # var_ready[item.split('x')[1]] = float(item.split('x')[0])
             var_ready['subindex'] = split_var[1]
             var_ready['coefficient'] = float(split_var[0])
     except ValueError:
@@ -195,8 +176,6 @@ def get_queue_results(browser):
     if browser.method == 'POST':
         form = QueuingForm(browser.POST)
         if form.is_valid():
-            # unit = form.cleaned_data.get('unit')
-            # time_unit = form.cleaned_data.get('time_unit')
             servers = form.cleaned_data.get('servers')
             pop_queue = form.cleaned_data.get('pop_queue').upper()
             arrival = form.cleaned_data.get('arrival')
