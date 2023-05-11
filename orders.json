@@ -1,10 +1,9 @@
-{
-	"script_name": "facebook",
+{"script_name": "facebook",
 	"script_version": "1.0",
 	"action": {
 		"fecha": "11-05-2023 12:23",
 		"action": "3",
 		"url": "",
-		"accouns": "[]"
-		}
+		"accounts": "[]"
+}
 }
